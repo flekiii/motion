@@ -1,0 +1,61 @@
+name: Bug report
+description: Report a problem with MOTION on Android or Linux
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve MOTION! Please do not include passwords, private videos, or sensitive information in screenshots or logs.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Android
+        - Linux
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: MOTION version
+      placeholder: "e.g. Android 0.3.2 Beta or Linux 0.1.0 Beta"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device / system version
+      placeholder: "e.g. Redmi 12C / HyperOS / Android version, or Linux distro + XFCE/X11"
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened?
+      placeholder: Describe the problem and any error shown.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open MOTION
+        2. Choose a wallpaper
+        3. Tap...
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Optional screenshots or logs
+      description: Remove any personal or sensitive information before attaching.
+    validations:
+      required: false
